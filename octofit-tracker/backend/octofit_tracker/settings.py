@@ -1,3 +1,7 @@
+# Ensure INSTALLED_APPS and MIDDLEWARE are defined before modification
+INSTALLED_APPS = INSTALLED_APPS if 'INSTALLED_APPS' in globals() else []
+MIDDLEWARE = MIDDLEWARE if 'MIDDLEWARE' in globals() else []
+
 # Add MongoDB database connection
 DATABASES = {
     "default": {
